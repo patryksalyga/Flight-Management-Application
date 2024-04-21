@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="342.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lot.lotapp.SelectPassengerController">
+<children>
+    <TableView fx:id="passengersTable" layoutX="14.0" layoutY="98.0" prefHeight="234.0" prefWidth="341.0">
+        <columns>
+            <TableColumn fx:id="idPassengerCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="ID" />
+            <TableColumn fx:id="namePassengerCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="NAME" />
+            <TableColumn fx:id="surnamePassengerCol" maxWidth="100.0" prefWidth="100.0" style="-fx-aligment: center;" text="SURNAME" />
+            <TableColumn fx:id="numberPassengerCol" maxWidth="100.0" prefWidth="100.0" style="-fx-aligment: center;" text="NUMBER" />
+        </columns>
+    </TableView>
+    <VBox layoutX="373.0" layoutY="172.0" prefHeight="160.0" prefWidth="90.0">
+        <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#getSearchPassengerView" prefHeight="78.0" prefWidth="90.0" text="SEARCH" />
+            <Button fx:id="sendBtn" mnemonicParsing="false" onMouseClicked="#selectPassenger" prefHeight="78.0" prefWidth="90.0" text="SELECT" />
+        </children>
+    </VBox>
+    <HBox layoutX="14.0" layoutY="15.0" prefHeight="69.0" prefWidth="341.0">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SELECT PASSENGER" wrappingWidth="335.99609375">
+                <font>
+                    <Font name="Avenir Heavy" size="32.0" />
+                </font>
+            </Text>
+        </children>
+    </HBox>
+</children>
+
+</AnchorPane>

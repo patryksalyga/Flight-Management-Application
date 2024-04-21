@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lot.lotapp.MenuController">
+    <children>
+        <TabPane layoutX="-1.0" prefHeight="400.0" prefWidth="607.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="FLIGHTS">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="369.0" prefWidth="597.0">
+                            <children>
+                                <TableView fx:id="flightsTable" layoutX="14.0" layoutY="104.0" prefHeight="251.0" prefWidth="572.0">
+                                    <columns>
+                                        <TableColumn fx:id="idFlightCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="ID" />
+                                        <TableColumn fx:id="numberFlightCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="NUMBER" />
+                                        <TableColumn fx:id="originFlightCol" maxWidth="100.0" prefWidth="100.0" style="-fx-aligment: center;" text="ORIGIN" />
+                                        <TableColumn fx:id="destinationFlightCol" maxWidth="100.0" prefWidth="100.0" style="-fx-aligment: center;" text="DESTINATION" />
+                                        <TableColumn fx:id="dateFlightCol" maxWidth="90.0" prefWidth="90.0" style="-fx-aligment: center;" text="DATE" />
+                                        <TableColumn fx:id="hourFlightCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="HOUR" />
+                                        <TableColumn fx:id="seatsFlightCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="SEATS" />
+                                    </columns>
+                                </TableView>
+                                <HBox layoutX="14.0" layoutY="10.0" prefHeight="74.0" prefWidth="450.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#getAddFlightView" prefHeight="78.0" prefWidth="90.0" text="ADD" />
+                              <Button layoutX="190.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#getSearchFlightView" prefHeight="78.0" prefWidth="90.0" text="SEARCH" />
+                              <Button mnemonicParsing="false" onMouseClicked="#getPassengersListView" prefHeight="78.0" prefWidth="90.0" text="LIST" textAlignment="CENTER" />
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#editFlightRecord" prefHeight="78.0" prefWidth="90.0" text="EDIT" />
+                              <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#deleteFlightRecord" prefHeight="78.0" prefWidth="90.0" text="DELETE" />
+                           </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="PASSENGERS">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="passengersTable" layoutX="14.0" layoutY="97.0" prefHeight="265.0" prefWidth="572.0">
+                           <columns>
+                              <TableColumn fx:id="idPassengerCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="ID" />
+                              <TableColumn fx:id="namePassengerCol" maxWidth="70.0" prefWidth="70.0" style="-fx-aligment: center;" text="NAME" />
+                              <TableColumn fx:id="surnamePassengerCol" maxWidth="100.0" prefWidth="100.0" style="-fx-aligment: center;" text="SURNAME" />
+                              <TableColumn fx:id="numberPassengerCol" maxWidth="100.0" prefWidth="100.0" style="-fx-aligment: center;" text="NUMBER" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="14.0" layoutY="14.0" prefHeight="74.0" prefWidth="360.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#getAddPassengerView" prefHeight="78.0" prefWidth="90.0" text="ADD" />
+                              <Button layoutX="190.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#getSearchPassengerView" prefHeight="78.0" prefWidth="90.0" text="SEARCH" />
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#editPassengerRecord" prefHeight="78.0" prefWidth="90.0" text="EDIT" />
+                              <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#deletePassengerRecord" prefHeight="78.0" prefWidth="90.0" text="DELETE" />
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
